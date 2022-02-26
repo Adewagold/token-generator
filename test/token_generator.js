@@ -10,4 +10,18 @@ contract("TokenGenerator", function (/* accounts */) {
     await TokenGenerator.deployed();
     return assert.isTrue(true);
   });
+
+  beforeEach(async () => {
+    instance = await TokenGenerator.new();
+
+  });
+
+  describe("Variables", () => {
+    it("should have a generated tokens function", async () => {
+      assert.equal(typeof instance.generatedTokens, 'function', "the contract has no generated token variable");
+    });
+  
+
+  });
+
 });

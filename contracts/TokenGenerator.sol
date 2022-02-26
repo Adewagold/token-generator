@@ -10,6 +10,8 @@ contract TokenGenerator {
   constructor() public {
   }
 
+  mapping(address=>address) public generatedTokens;
+
   //Create a regular ERC20 token
   function createErc20Token(uint256 totalSupply, string memory name, string memory symbol) public returns (address){
     address owner = msg.sender;
