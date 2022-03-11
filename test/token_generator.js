@@ -11,9 +11,9 @@ contract("TokenGenerator", function (/* accounts */) {
     return assert.isTrue(true);
   });
 
+  let instance;
   beforeEach(async () => {
     instance = await TokenGenerator.new();
-
   });
 
   describe("Variables", () => {
